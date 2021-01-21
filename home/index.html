@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="home.js"></script>
+    
+</head>
+  <header>
+    <nav>
+      <a class="icon"><img  height="50px" src="../images/logo-cream.png"/></a>
+      <a class="marmotte" href="../home/index.html">La Marmotte</a>
+        <div class="navigation">
+        <a  href="../home/index.html">Home</a>
+        <a>|</a>
+        
+        <form class= "categories" action="../recipe_page/recipe_page.html" method="GET">
+          <label for="recipes" class="label">Categories</label>
+            <select name="recipes"  onchange="this.form.submit()">
+              <option disabled selected value>Select a Recipe</option>
+              <optgroup label="Starters" id="starters">
+               </optgroup>
+               <optgroup label="Main Dishes" id="main_dishes">
+               </optgroup>
+               <optgroup label="Desserts" id="desserts">
+               </optgroup>
+            </select>
+          </form>
+        <a>|</a>
+        <a  onclick="add_recipe()">Add Recipe</a>
+      </div>
+      </nav>
+  </header>
+
+  <body onload="insertRecipes(); getRecipes();">
+   
+    <div class = "Recipe">
+      <img src = "../images/profiterol.jpg">
+      <form method="GET" action="../recipe_page/recipe_page.html">
+        <button type ="submit" name="recipes" value="recipe4">
+      <a class="Header">Profiterole</a>
+    </button>  
+    </form>
+      </br>
+      <a class= "Author" >Jane Dunn</a>
+    </br>
+      <p class="desc">Choux pastry dough is piped through a pastry bag or dropped with a pair of spoons into small balls and baked to form largely hollow puffs .After cooling, the baked profiteroles are injected with filling using a pastry bag and narrow piping tip,or by slicing off the top, filling them, and reassembling. For sweet profiteroles, additional glazes or decorations may then be added.</p>
+    </div>
+    
+  </br> </br> </br>
+  
+
+    <div class = "Recipe">
+      <img src = "../images/babka.jpg" >
+
+      <form method="GET" action="../recipe_page/recipe_page.html">
+        <button type ="submit" name="recipes" value="recipe5">
+      <a class="Header">Chocolate Babka</a>
+    </button>  
+    </form>
+      </br>
+      <a class= "Author" >Cenk Sönmezsoy</a>
+    </br>
+      <p class="desc">Baking a chocolate babka is no casual undertaking. The Eastern European yeast-risen coffee cake has 14 steps and takes all day to make. But the results are worth every sugarcoated second – with a moist, deeply flavored brioche-like cake wrapped around a dark fudge filling, then topped with cocoa streusel crumbs.</p>
+    </div>
+
+  </br> </br> </br>
+  
+
+  <div class = "Recipe">
+    
+    <img src = "../images/brownie.jpg">
+    <form method="GET" action="../recipe_page/recipe_page.html">
+      <button type ="submit" name="recipes" value="recipe6">
+    <a class="Header">Brownie</a>
+  </button>  
+  </form>
+    </br>
+    <a class= "Author" >Jeanine Donofrio</a>
+    </br>
+    <p class="desc">According to legend, the brownie was invented by one Brownie Schrumph when she tried to make a chocolate cake without baking powder or baking soda. Instead of rising, the brownie collapses into a dense texture. Brownies evolved to use less and less liquid until most recipes only call for eggs and melted butter and no additional liquid. They also have less and less flour to get that more dense texture instead of the more cake-like texture of the original brownie. Brown sugar also gives them that shiny top crust.</p>
+  </div>
+   
+</body>
+
+<footer>
+  <div class = "footer-content">About us:
+    <p class="footer">La Marmotte is a website where users can view recipes. Recipes are categorised and displayed on a different page. Users can also add their own recipes but they are required to sign up and/or login to our website to do so.</p>
+  </div>
+</footer>
+
+</html>

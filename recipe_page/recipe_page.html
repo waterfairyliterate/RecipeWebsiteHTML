@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<head>
+<link rel="stylesheet" href="recipe_page.css">
+<script type="text/javascript" src="recipe_page.js"></script>
+</head>
+ <header>
+    <nav>
+      <a class="icon"><img  height="50px" src="../images/logo-cream.png"/></a>
+      <a class="marmotte" href="../home/index.html">La Marmotte</a>
+        <div class="navigation">
+        <a  href="../home/index.html">Home</a>
+        <a>|</a>
+        
+        <form class= "categories" action="../recipe_page/recipe_page.html" method="GET">
+          <label for="recipes" class="label">Categories</label>
+            <select name="recipes"  onchange="this.form.submit()">
+              <option disabled selected value>Select a Recipe</option>
+              <optgroup label="Starters" id="starters">
+               </optgroup>
+               <optgroup label="Main Dishes" id="main_dishes">
+               </optgroup>
+               <optgroup label="Desserts" id="desserts">
+               </optgroup>
+            </select>
+          </form>
+        <a>|</a>
+        <a onclick="add_recipe()">Add Recipe</a>
+      </div>
+      </nav>
+  </header>
+
+<body onload="getRecipes(); getRecipe(); checkInserted();">
+<div class="pagetitle"> 
+  <!--title -->
+  <h1 id="name" class="recipe_name"></h1>
+  <!--author -->
+  <h3 id="author" class="author"><i></i></h3>
+</div>
+	<!--description --> 
+<div id="content"><p id= "description" class="description"></p></div>
+	<!--ingredients --> 
+<div id="div_ingredients" >
+  <h2><img class="ingredient_icon"  src="../images/grocery.png" /> Ingredients</h2><p id= "ingredients" class = "ingredients"></p></div>
+	<!--instrucctions --> 
+<div id="div_instructions" >
+  <h2><img class="instructions_icon"  src="../images/bake.png" /> Instructions</h2><p id="instructions" class="instructions"></p></div>
+</body>
+<footer>
+  <div class = "footer-content">About us:
+    <p class="footer">La Marmotte is a website where users can view recipes. Recipes are categorized and displayed on a different page. Users can also add their own recipes but they are required to sign up and/or login to our website to do so.</p>
+  </div>
+</footer>
+</html>

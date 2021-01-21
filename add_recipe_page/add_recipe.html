@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+		<link rel="stylesheet" href="add_recipe.css">
+		<script src="add_recipe.js"></script>
+	</head>
+    <body onload="getRecipes();">
+      <header>
+
+      <nav> 
+        <a class="icon"><img  height="50px" src="../images/logo-cream.png"/></a>
+        <a class="marmotte" href="../home/index.html">La Marmotte</a>
+        <div class="navigation"> <a  href="../home/index.html">Home</a> 
+        <a>|</a>
+		    <form class= "categories" action="../recipe_page/recipe_page.html" method="GET">
+			<label for="recipes" class="label">Categories</label>
+      <select name="recipes"  onchange="this.form.submit()">
+        <option disabled selected value>Select a Recipe</option>
+			  <optgroup label="Starters" id="starters">
+			  </optgroup>
+			  <optgroup label="Main Dishes" id="main_dishes">
+			  </optgroup>
+			  <optgroup label="Desserts" id="desserts">
+			  </optgroup>
+			</select>
+		      </form>
+		      <a>|</a> <a onclick="add_recipe()">Add Recipe</a> </div>
+		  </nav>
+		</header>
+		<div>
+        <form action="../home/index.html" onsubmit="return addRecipe()">
+            <h4>Step 1</h4>
+              <select id="recipe_category" size = 1>
+                 <option value="blank" disabled selected value>Choose a category</option>
+                 <option value="starters">Starters</option>
+                 <option value="main_dishes">Main Dishes</option>
+                 <option value="desserts">Desserts</option>
+              </select>
+            <br>
+            <h4>Step 2</h4>
+            <input id = "recipe_name" type="text" size = "21" placeholder="Give a name to your recipe" required>
+          <br>
+            <h4>Step 3</h4>
+            <input id = "recipe_author" type="text" size = "22" placeholder="Add an author to your recipe" required>
+            <br>
+            <h4>Step 4</h4>
+           <h6>Add your recipe ingredients with measurements </h6>
+            <textarea id = "ingredients" rows="5" cols="35" placeholder = "Add your ingredients" required> </textarea>
+          <br>
+            <h4>Step 5</h4>
+           <h6>Add your recipe instructions to help others </h6>
+            <textarea id = "instructions" rows="5" cols="35" placeholder = "Add your ingredients" required> </textarea>
+            <br>
+            <h4>Step 6</h4>
+            <h6>Add your recipe description</h6>
+            <textarea id = "recipe_desc" rows="5" cols = "35" placeholder="Describe your recipe with more details" required> </textarea>
+            <br>
+              <button id = "add_recipe_button" type="submit">Add Recipe</button>
+              <p id="name_error" class = "error">&nbsp </p>
+            </form>
+            <footer>
+              <div class = "footer-content">About us:
+                <p class="footer">La Marmotte is a website where users can view recipes. Recipes are categorized and the categories are displayed on a different page. Users can also add their own recipes but they are required to sign up and/or login to our website to do so.</p>
+              </div>
+            </footer> 
+    </body>
+</html>
+
+
+
